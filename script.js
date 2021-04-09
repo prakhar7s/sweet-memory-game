@@ -3,22 +3,22 @@ const stars = document.querySelector(".stars");
 const movesDiv = document.querySelector(".moves");
 
 const cardIcons = [
-  "bomb",
-  "bomb",
-  "bicycle",
-  "bicycle",
-  "leaf",
-  "leaf",
-  "cube",
-  "cube",
-  "anchor",
-  "anchor",
-  "paper-plane-o",
-  "paper-plane-o",
-  "bolt",
-  "bolt",
-  "diamond",
-  "diamond",
+  "twitter",
+  "twitter",
+  "facebook",
+  "facebook",
+  "internet-explorer",
+  "internet-explorer",
+  "safari",
+  "safari",
+  "whatsapp",
+  "whatsapp",
+  "linkedin",
+  "linkedin",
+  "google",
+  "google",
+  "pinterest-p",
+  "pinterest-p",
 ];
 
 const shuffledCardIcons = shuffleArray(cardIcons);
@@ -104,12 +104,16 @@ const setOpenData = (
 };
 
 const updateStars = () => {
-  if (openData.moves > 5) {
+  if (openData.moves > 10) {
     stars.children[2].className = "fa fa-star-o";
   }
 
-  if (openData.moves > 10) {
+  if (openData.moves > 20) {
     stars.children[1].className = "fa fa-star-o";
+  }
+
+  if (openData.moves > 30) {
+    stars.children[0].className = "fa fa-star-o";
   }
 };
 
