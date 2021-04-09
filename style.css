@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+* {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
 .game-container {
   height: 100vh;
   display: flex;
@@ -13,6 +17,12 @@
   align-items: center;
   flex-direction: column;
   background-color: rgb(225, 242, 253);
+}
+
+.game-name {
+  font-family: "Pacifico", cursive;
+  font-size: 25px;
+  letter-spacing: 2px;
 }
 
 .game-box {
@@ -25,6 +35,23 @@
   box-shadow: -8px -8px 8px rgba(0, 0, 0, 0.3);
   border-radius: 8px;
   padding: 10px;
+}
+
+.score-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 20px;
+}
+
+.stars {
+  margin-right: 300px;
+}
+
+.stars i {
+  font-size: 22px;
+  color: rgb(248, 193, 42);
 }
 
 .game-card {
@@ -91,6 +118,10 @@
     height: 400px;
   }
 
+  .stars {
+    margin-right: 115px;
+  }
+
   .game-card {
     width: 19%;
     height: 17%;
@@ -116,5 +147,25 @@
 
   .card-icon {
     font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .game-box {
+    width: 270px;
+    height: 270px;
+  }
+
+  .game-name {
+    margin-bottom: 40px;
+    font-size: 26px;
+  }
+
+  .game-card {
+    width: 18%;
+  }
+
+  .card-icon {
+    font-size: 20px;
   }
 }
