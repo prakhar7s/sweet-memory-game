@@ -73,6 +73,9 @@ function add(e) {
 
       //   Push matched cards
       openData.alreadySelected.push(cardName);
+      if (openData.alreadySelected.length === 8) {
+        winnerMsg();
+      }
 
       // Reset
       setOpenData("", false, null);
@@ -88,9 +91,40 @@ function add(e) {
   }
 }
 
-// swal({
-//   title: "Here's a title!",
-// });
+const refershGame = () => {
+  swal({
+    allowEscapeKey: false,
+    allowOutsideClick: false,
+    title: "Are you sure?",
+    text: "Your progress will be Lost!",
+    type: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#9BCB3C",
+    cancelButtonColor: "#EE0E51",
+    confirmButtonText: "Yes, Restart Game!",
+  }).then(function (isConfirm) {
+    if (isConfirm) {
+      window.location.reload();
+    }
+  });
+};
+
+const winnerMsg = () => {
+  swal({
+    allowEscapeKey: false,
+    allowOutsideClick: false,
+    title: "Congratulations! 🎉",
+    type: "success",
+    showCancelButton: true,
+    confirmButtonColor: "#9BCB3C",
+    cancelButtonColor: "#EE0E51",
+    confirmButtonText: "Start, another game!",
+  }).then(function (isConfirm) {
+    if (isConfirm) {
+      window.location.reload();
+    }
+  });
+};
 
 const setOpenData = (
   previousOpenedCardName,
