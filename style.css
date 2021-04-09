@@ -108,7 +108,7 @@
 
 .game-card.selected-card {
   background-color: rgb(32, 255, 132);
-  box-shadow: inset 8px 8px 8px rgba(0, 0, 0, 0.2),
+  box-shadow: 8px -8px 8px rgba(0, 0, 0, 0.15),
     inset -8px -8px 8px rgba(255, 255, 255, 0.2);
 }
 
@@ -169,7 +169,7 @@
   }
 
   .swal2-modal {
-    margin-top: -150px !important;
+    margin-top: -190px !important;
   }
 }
 
